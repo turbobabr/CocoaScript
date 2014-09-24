@@ -57,7 +57,7 @@
 		22E31F7B19D31033003CC658 /* MORuntime_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 22E31F7819D31033003CC658 /* MORuntime_Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		22E31F8119D3107D003CC658 /* MOBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = 22E31F7C19D3107D003CC658 /* MOBlock.h */; };
 		22E31F8219D3107D003CC658 /* MOBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E31F7D19D3107D003CC658 /* MOBlock.m */; };
-		22E31F8319D3107D003CC658 /* MOJavaScriptObject_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 22E31F7E19D3107D003CC658 /* MOJavaScriptObject_Private.h */; };
+		22E31F8319D3107D003CC658 /* MOJavaScriptObject_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 22E31F7E19D3107D003CC658 /* MOJavaScriptObject_Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		22E31F8419D3107D003CC658 /* MOWeak.h in Headers */ = {isa = PBXBuildFile; fileRef = 22E31F7F19D3107D003CC658 /* MOWeak.h */; };
 		22E31F8519D3107D003CC658 /* MOWeak.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E31F8019D3107D003CC658 /* MOWeak.m */; };
 		22E31F8B19D310A0003CC658 /* MOFunctionArgument.h in Headers */ = {isa = PBXBuildFile; fileRef = 22E31F8719D310A0003CC658 /* MOFunctionArgument.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -1116,13 +1116,13 @@
 			children = (
 				22E31F7C19D3107D003CC658 /* MOBlock.h */,
 				22E31F7D19D3107D003CC658 /* MOBlock.m */,
-				22E31F7E19D3107D003CC658 /* MOJavaScriptObject_Private.h */,
 				22E31F7F19D3107D003CC658 /* MOWeak.h */,
 				22E31F8019D3107D003CC658 /* MOWeak.m */,
 				CC66D878181A2B0A0039A0A5 /* MOAllocator.h */,
 				CC66D879181A2B0A0039A0A5 /* MOAllocator.m */,
 				CC66D87A181A2B0A0039A0A5 /* MOBox.h */,
 				CC66D87B181A2B0A0039A0A5 /* MOBox.m */,
+				22E31F7E19D3107D003CC658 /* MOJavaScriptObject_Private.h */,
 				CC66D884181A2B0A0039A0A5 /* MOJavaScriptObject.h */,
 				CC66D885181A2B0A0039A0A5 /* MOJavaScriptObject.m */,
 				CC66D887181A2B0A0039A0A5 /* MOMethod.h */,

@@ -9,6 +9,7 @@
 #import "COSTarget.h"
 #import <objc/runtime.h>
 
+#import <Mocha/MOJavaScriptObject_Private.h>
 @interface COSTarget ()
 
 @property (weak) COScript *cosContext;

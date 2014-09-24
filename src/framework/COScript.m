@@ -12,10 +12,10 @@
 #import "COScript+Interval.h"
 
 #import <ScriptingBridge/ScriptingBridge.h>
-#import "MochaRuntime.h"
-#import "MOMethod.h"
-#import "MOUndefined.h"
-#import "MOBridgeSupportController.h"
+#import <Mocha/MochaRuntime.h>
+#import <Mocha/MOMethod.h>
+#import <Mocha/MOUndefined.h>
+#import <Mocha/MOBridgeSupportController.h>
 
 #import <stdarg.h>
 

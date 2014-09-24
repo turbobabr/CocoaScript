@@ -8,6 +8,9 @@
 
 #import "COSInterval.h"
 #import "COScript+Interval.h"
+
+#import <Mocha/MOJavaScriptObject_Private.h>
+
 @implementation COSInterval
 
 + (id)scheduleWithInterval:(NSTimeInterval)i cocoaScript:(COScript*)cos jsFunction:(MOJavaScriptObject *)jsFunction repeat:(BOOL)repeat {

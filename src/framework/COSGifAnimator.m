@@ -7,6 +7,7 @@
 //
 
 #import "COSGifAnimator.h"
+#import <Mocha/MOJavaScriptObject_Private.h>
 
 @implementation COSGifAnimator
 

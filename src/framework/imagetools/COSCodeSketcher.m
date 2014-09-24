@@ -8,6 +8,8 @@
 
 #import "COSCodeSketcher.h"
 
+#import <Mocha/MOJavaScriptObject_Private.h>
+
 @interface COScript (Private)
 
 @end
