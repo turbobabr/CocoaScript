@@ -7,6 +7,7 @@
 //
 
 #import "COSQuickCIFilter.h"
+#import <Mocha/MOJavaScriptObject.h>
 
 // FIXME: Gus- you can get CI kernel errors like so: http://stackoverflow.com/questions/13754997/how-do-you-debug-syntax-errors-in-a-core-image-kernel"
 /*

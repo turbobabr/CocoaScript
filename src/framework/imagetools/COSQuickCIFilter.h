@@ -9,7 +9,8 @@
 #import <Cocoa/Cocoa.h>
 #import <QuartzCore/QuartzCore.h>
 #import <CocoaScript/COScript.h>
-#import <CocoaScript/MOJavaScriptObject.h>
+
+@class MOJavaScriptObject;
 
 @interface COSQuickCIFilter : CIFilter {
     CIKernel *_theKernel;
