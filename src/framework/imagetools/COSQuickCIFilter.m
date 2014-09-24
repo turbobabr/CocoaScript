@@ -98,9 +98,9 @@
 }
 
 - (CGRect)xxregionOf:(int)sampler destRect:(CGRect)rect userInfo:(id)ui {
-    
-    NSValue *v = [[COScript currentCOScript] callJSFunction:[_roiMethod JSObject] withArgumentsInArray:nil];
-    
+    #pragma message "FIXME: fixme"
+    //NSValue *v = [[COScript currentCOScript] callJSFunction:[_roiMethod JSObject] withArgumentsInArray:nil];
+    NSValue *v = nil;
     return [v rectValue];
 }
 
@@ -117,8 +117,10 @@
     [_theKernel setROISelector:@selector(regionOf:destRect:userInfo:)];
     
     if (_outputImageMethod && [COScript currentCOScript]) {
-        CIImage *i = [[COScript currentCOScript] callJSFunction:[_outputImageMethod JSObject] withArgumentsInArray:nil];
-        return i;
+        #pragma message "FIXME: fixme"
+        //CIImage *i = [[COScript currentCOScript] callJSFunction:[_outputImageMethod JSObject] withArgumentsInArray:nil];
+        //return i;
+        return nil;
     }
     
     NSMutableDictionary *options = [NSMutableDictionary dictionary];
