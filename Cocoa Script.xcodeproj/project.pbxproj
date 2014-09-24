@@ -99,6 +99,7 @@
 		22E31F6E19D2FD49003CC658 /* MOBridgeSupportSymbol.m in Sources */ = {isa = PBXBuildFile; fileRef = CC66D847181A2AB10039A0A5 /* MOBridgeSupportSymbol.m */; };
 		22E31F6F19D2FD49003CC658 /* Mocha.m in Sources */ = {isa = PBXBuildFile; fileRef = CC66D861181A2AE10039A0A5 /* Mocha.m */; };
 		22E31F7019D2FD49003CC658 /* MochaRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = CC66D865181A2AE10039A0A5 /* MochaRuntime.m */; };
+		22E31F7319D2FF42003CC658 /* libMocha.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 22E31F2519D2FCBC003CC658 /* libMocha.a */; };
 		384830E21832D48500B34168 /* COSTarget.h in Headers */ = {isa = PBXBuildFile; fileRef = 384830E01832D48500B34168 /* COSTarget.h */; };
 		384830E31832D48500B34168 /* COSTarget.m in Sources */ = {isa = PBXBuildFile; fileRef = 384830E11832D48500B34168 /* COSTarget.m */; };
 		8D15AC340486D014006FF6A4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */; };
@@ -476,7 +477,7 @@
 /* Begin PBXFileReference section */
 		1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		13E42FBA07B3F13500E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
-		22E31F2519D2FCBC003CC658 /* libmocha.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libmocha.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		22E31F2519D2FCBC003CC658 /* libMocha.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMocha.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A37F4C4FDCFA73011CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		384830E01832D48500B34168 /* COSTarget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = COSTarget.h; path = src/framework/COSTarget.h; sourceTree = "<group>"; };
@@ -765,6 +766,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22E31F7319D2FF42003CC658 /* libMocha.a in Frameworks */,
 				CC4143500F25261000E46669 /* Carbon.framework in Frameworks */,
 				CC4143510F25261100E46669 /* ScriptingBridge.framework in Frameworks */,
 				CC4143520F25261200E46669 /* JavaScriptCore.framework in Frameworks */,
@@ -816,7 +818,7 @@
 				8D15AC370486D014006FF6A4 /* Cocoa Script Editor.app */,
 				CC5FB7C20F1FDCCC00F4ECC2 /* coscript */,
 				CC41431A0F25254200E46669 /* CocoaScript.framework */,
-				22E31F2519D2FCBC003CC658 /* libmocha.a */,
+				22E31F2519D2FCBC003CC658 /* libMocha.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1391,7 +1393,7 @@
 			);
 			name = Mocha;
 			productName = mocha2;
-			productReference = 22E31F2519D2FCBC003CC658 /* libmocha.a */;
+			productReference = 22E31F2519D2FCBC003CC658 /* libMocha.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		8D15AC270486D014006FF6A4 /* Cocoa Script Editor */ = {
