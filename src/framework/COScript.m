@@ -76,7 +76,7 @@ void COScriptDebug(NSString* format, ...) {
 - (id)init {
 	self = [super init];
 	if ((self != nil)) {
-        _mochaRuntime = [[MORuntime alloc] init];
+        _mochaRuntime = [[MORuntime alloc] initWithOptions:MORuntimeOptionAutomaticReferenceCounting];
         
         [self setEnv:[NSMutableDictionary dictionary]];
         [self setShouldPreprocess:YES];
