@@ -1,0 +1,5 @@
+var s = NSString
+for (var n = 0; n < 100000; n++) {
+    var test = [s stringWithString:"1"];
+    print(n + ": " + test);
+}
