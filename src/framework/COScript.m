@@ -528,6 +528,8 @@ NSString *currentCOScriptThreadIdentifier = @"org.jstalk.currentCOScriptHack";
 }
 
 - (void)print:(NSString*)s {
+    if ([s isEqualToString:@"undefined: 1"])
+        NSLog(@"hello");
     
     if (_printController && [_printController respondsToSelector:@selector(print:)]) {
         [_printController print:s];
