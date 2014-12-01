@@ -1169,6 +1169,18 @@ JSValueRef Mocha_getProperty(JSContextRef ctx, JSObjectRef object, JSStringRef p
 #pragma mark Mocha Objects
 
 static void MOObject_initialize(JSContextRef ctx, JSObjectRef object) {
+    
+    // Protecting every object around.
+    /*
+        Mocha doesn't protect any variables & objects from garbage collector.
+        It seems that all the crashes happen because global objects like `doc`,`sketch`,etc are deallocated, but
+        I've found out that in some cases Mocha devastates closures too, thus it's more safer to protect every
+        object introduced by script. I believe such protection introduces memory leaks and hash table conflicts.
+        This should be tested carryfully prior any real usage.
+     */
+    JSValueProtect(ctx, object);
+    
+    
     MOBox *private = (__bridge MOBox *)(JSObjectGetPrivate(object));
     CFRetain((__bridge CFTypeRef)private);
     
@@ -1180,7 +1192,23 @@ static void MOObject_initialize(JSContextRef ctx, JSObjectRef object) {
 }
 
 static void MOObject_finalize(JSObjectRef object) {
+    
     MOBox *private = (__bridge MOBox *)(JSObjectGetPrivate(object));
+    Mocha *runtime = [private runtime];
+    
+    // Unprotect objects.
+    // JavaScriptCore documentation explicitly says that this call is illegal in finalization callback.
+    // Here is the original description:
+    /*
+        You must not call any function that may cause a garbage collection or an allocation
+        of a garbage collected object from within a JSObjectFinalizeCallback. This includes
+        all functions that have a JSContextRef parameter.
+     */
+    
+    // There must be another place to do this, since this statement crashes Sketch:
+    // JSValueUnprotect([runtime context], object);
+    
+    
     id o = [private representedObject];
     
     //debug(@"finalizing %@ o: %p", o, object);
@@ -1195,7 +1223,6 @@ static void MOObject_finalize(JSObjectRef object) {
     }
     
     // Remove the object association
-    Mocha *runtime = [private runtime];
     [runtime removeBoxAssociationForObject:o];
     
     JSObjectSetPrivate(object, NULL);
